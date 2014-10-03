@@ -1,0 +1,43 @@
+<html>
+<link href="../static/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../static/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+<link href="../static/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet"
+      type="text/css"/>
+<head>
+    <title>Tags</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body ng-app="DemoApp">
+<form ng-controller="demoController">
+    <label>
+        <bootstrap-tagsinput
+                ng-model="tags"
+                tagClass="label label-info"
+                typeahead-source="loadTags"
+                itemText="text"
+                itemValue="value">
+        </bootstrap-tagsinput>
+        <div>
+            {{tags}}
+        </div>
+        <div>
+            <button ng-click="update()">update</button>
+        </div>
+    </label>
+</form>
+</body>
+<script src="../static/bower_components/jquery/dist/jquery.js"></script>
+<script src="../static/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../static/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+<!---->
+<script src="../static/bower_components/angular/angular.js"></script>
+<script src="../static/bower_components/angular-resource/angular-resource.js"></script>
+<script src="../static/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput-angular.js"></script>
+<script src="../static/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.js"></script>
+
+<script src="../static/js/demo.js"></script>
+</html>
